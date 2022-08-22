@@ -9,7 +9,7 @@ import helper_classes.PathHandler;
 /**
  * Cat class Returns content of the file(s) at path(s) that are provided
  */
-public class Cat extends Command {
+public class Cat extends commands.Command {
 
     public Cat() {
         super(100, 1);

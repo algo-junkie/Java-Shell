@@ -11,7 +11,7 @@ import commands.CommandController;
 public class JShell {
 
     public static void main(String[] args) {
-        JShellState shellState = new JShellState();
+        driver.JShellState shellState = new driver.JShellState();
         CommandController commandExecutor = new CommandController();
         Scanner in = new Scanner(System.in);
         // keep reading the command and executing it until user exits the program
@@ -20,7 +20,7 @@ public class JShell {
             // read next input line parse it and check if it is valid
             String commandLine = in.nextLine();
             try {
-                String output = commandExecutor.executeCommand(shellState, commandLine);
+                String output = commandExecutor.executeCommand((driver.IShellState) shellState, commandLine);
                 if (!output.equals("")) {
                     System.out.println(output);
                 }
